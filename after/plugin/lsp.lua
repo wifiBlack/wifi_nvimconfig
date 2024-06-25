@@ -7,7 +7,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'pyright', 'lua_ls'},
+  ensure_installed = {'pyright', 'lua_ls', "marksman"},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})

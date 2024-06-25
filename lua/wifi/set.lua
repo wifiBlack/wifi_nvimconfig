@@ -1,3 +1,4 @@
+vim.opt.guifont = "0xProto Nerd Font:h17"
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
