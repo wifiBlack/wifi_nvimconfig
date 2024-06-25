@@ -13,8 +13,8 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<leader>sv", "<C-w>s") --垂直方向增加一个窗口
 keymap.set("n", "<leader>sh", "<C-w>v") --水平方向增加一个窗口
 keymap.set("n", "<leader>nh", ":nohl<CR>") --取消高亮
-keymap.set("n", "<leader>tr", vim.cmd.Ex) --设置进入文件树命令为
+-- keymap.set("n", "<leader>tr", vim.cmd.Ex) --设置进入文件树命令为
 keymap.set("n", "<leader>aa", "ggVG") --全选文本
-keymap.set("n", "<leader>dt", vim.cmd.NvimTreeToggle)
+-- keymap.set("n", "<leader>dt", vim.cmd.NvimTreeToggle)
 keymap.set("v", "<leader>yy", '"+y')
 keymap.set("v", "<leader>p", '"+p')
