@@ -1,6 +1,6 @@
 vim.opt.guifont = "0xProto Nerd Font:h17"
 vim.opt.guicursor = ""
-vim.g.neovide_transparency = 0.75
+vim.g.neovide_transparency = 0.9
 
 -- Common settings
 vim.opt.nu = true

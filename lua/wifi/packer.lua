@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
                 -- ...
             })
 
-            vim.cmd('colorscheme github_dark')
+            -- vim.cmd('colorscheme github_dark')
         end
     })
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -48,13 +48,9 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     } 
-    --markdown pugins
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
-
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }) 
+    use {
+            ("folke/tokyonight.nvim")
+        }
 
 end)
 
