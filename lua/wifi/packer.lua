@@ -51,6 +51,6 @@ return require('packer').startup(function(use)
     use {
             ("folke/tokyonight.nvim")
         }
-
+    use{("Exafunction/codeium.vim")}
 end)
 
