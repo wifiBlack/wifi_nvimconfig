@@ -52,5 +52,10 @@ return require('packer').startup(function(use)
             ("folke/tokyonight.nvim")
         }
     use{("Exafunction/codeium.vim")}
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
+
 
