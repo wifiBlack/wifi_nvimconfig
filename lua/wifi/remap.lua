@@ -44,3 +44,15 @@ vim.api.nvim_set_keymap('n', '<leader>tv2', ':ToggleTerm 2 direction=vertical<CR
 -- 浮动窗口打开终端3
 vim.api.nvim_set_keymap('n', '<leader>tf3', ':ToggleTerm 3 direction=float<CR>', {noremap = true, silent = true})
 
+-- 调试控制快捷键
+
+-- 调试控制快捷键，加入 CTRL 组合键
+vim.api.nvim_set_keymap('n', '<C-F5>', ':lua require"dap".continue()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-F10>', ':lua require"dap".step_over()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-F11>', ':lua require"dap".step_into()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-F12>', ':lua require"dap".step_out()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>b', ':lua require"dap".toggle_breakpoint()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>B', ':lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>lp', ':lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>dr', ':lua require"dap".repl.open()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>dl', ':lua require"dap".run_last()<CR>', {noremap = true, silent = true})

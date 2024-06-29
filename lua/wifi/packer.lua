@@ -1,5 +1,4 @@
 -- Only required if you have packer configured as `opt` vim.cmd [[packadd packer.nvim]]
-
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
@@ -49,8 +48,8 @@ return require('packer').startup(function(use)
     } 
 
     use {
-            ("folke/tokyonight.nvim")
-        }
+        ("folke/tokyonight.nvim")
+    }
     use{("Exafunction/codeium.vim")}
     use {
         'nvim-lualine/lualine.nvim',
@@ -70,4 +69,6 @@ return require('packer').startup(function(use)
         theme = 'doom',
         requires = {'nvim-tree/nvim-web-devicons'}
     }
+    use 'mfussenegger/nvim-dap'
+    use 'mfussenegger/nvim-dap-python'
 end)
