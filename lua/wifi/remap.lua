@@ -29,12 +29,18 @@ keymap.set("v", "<leader>yy", '"+y', { desc = "复制到系统剪切板" })
 keymap.set("n", "<leader>yy", '"+y', { desc = "复制到系统剪切板" })
 keymap.set("n", "<leader>p", '"+p', { desc = "从系统剪切板粘贴" })
 
------------------- Floaterm 键位配置 ------------------
--- 设置键位映射的函数
-local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+
+-- 切换到终端1
+vim.api.nvim_set_keymap('n', '<leader>t1', ':ToggleTerm 1<CR>', {noremap = true, silent = true})
+-- 切换到终端2
+vim.api.nvim_set_keymap('n', '<leader>t2', ':ToggleTerm 2<CR>', {noremap = true, silent = true})
+-- 切换到终端3
+vim.api.nvim_set_keymap('n', '<leader>t3', ':ToggleTerm 3<CR>', {noremap = true, silent = true})
+
+-- 水平分割打开终端1
+vim.api.nvim_set_keymap('n', '<leader>th1', ':ToggleTerm 1 direction=horizontal<CR>', {noremap = true, silent = true})
+-- 垂直分割打开终端2
+vim.api.nvim_set_keymap('n', '<leader>tv2', ':ToggleTerm 2 direction=vertical<CR>', {noremap = true, silent = true})
+-- 浮动窗口打开终端3
+vim.api.nvim_set_keymap('n', '<leader>tf3', ':ToggleTerm 3 direction=float<CR>', {noremap = true, silent = true})
+
