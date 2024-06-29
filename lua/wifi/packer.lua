@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     } 
+
     use {
             ("folke/tokyonight.nvim")
         }
@@ -56,4 +57,14 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use {'voldikss/vim-floaterm'}
+    use {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                -- config
+            }
+        end,
+        requires = {'nvim-tree/nvim-web-devicons'}
+    }
 end)
