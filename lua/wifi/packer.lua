@@ -56,7 +56,9 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-    use {'voldikss/vim-floaterm'}
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
     use {
         'nvimdev/dashboard-nvim',
         event = 'VimEnter',
@@ -65,6 +67,7 @@ return require('packer').startup(function(use)
                 -- config
             }
         end,
+        theme = 'doom',
         requires = {'nvim-tree/nvim-web-devicons'}
     }
 end)

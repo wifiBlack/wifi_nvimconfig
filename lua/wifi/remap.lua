@@ -38,11 +38,3 @@ local function map(mode, lhs, rhs, opts)
   end
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
-
--- Floaterm 键位配置
-map('n', '<leader>te', ':FloatermNew<CR>', { desc = 'New Floaterm' })
-map('n', '<leader>tt', ':FloatermToggle<CR>', { desc = 'Toggle Floaterm' })
-map('n', '<leader>nt', ':FloatermNext<CR>', { desc = 'Next Floaterm' })
-map('n', '<leader>pt', ':FloatermPrev<CR>', { desc = 'Pevious Floaterm' })
-map('t', '<Esc>', '<C-\\><C-n>:q<CR>', { desc = 'Exit Floaterm' })
-
