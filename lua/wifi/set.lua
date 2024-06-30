@@ -1,6 +1,7 @@
 vim.opt.guifont = "0xProto Nerd Font:h17"
 vim.opt.guicursor = ""
 vim.g.neovide_transparency = 0.9
+vim.g.python_host_prog = "/home/wifi/anaconda3/envs/openmmlab/bin/python"
 
 -- Common settings
 vim.opt.nu = true

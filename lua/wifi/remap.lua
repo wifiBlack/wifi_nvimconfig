@@ -29,6 +29,7 @@ keymap.set("v", "<leader>yy", '"+y', { desc = "复制到系统剪切板" })
 keymap.set("n", "<leader>yy", '"+y', { desc = "复制到系统剪切板" })
 keymap.set("n", "<leader>p", '"+p', { desc = "从系统剪切板粘贴" })
 
+keymap.set("n", "<leader>das", vim.cmd.Dashboard, { desc = "打开 Dashboard" })
 
 -- 切换到终端1
 vim.api.nvim_set_keymap('n', '<leader>t1', ':ToggleTerm 1<CR>', {noremap = true, silent = true})
@@ -47,8 +48,8 @@ vim.api.nvim_set_keymap('n', '<leader>tf3', ':ToggleTerm 3 direction=float<CR>',
 -- 调试控制快捷键
 
 -- 调试控制快捷键，加入 CTRL 组合键
-vim.api.nvim_set_keymap('n', '<C-F5>', ':lua require"dap".continue()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-F10>', ':lua require"dap".step_over()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>db', ':lua require"dap".continue()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>nn', ':lua require"dap".step_over()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-F11>', ':lua require"dap".step_into()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-F12>', ':lua require"dap".step_out()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>b', ':lua require"dap".toggle_breakpoint()<CR>', {noremap = true, silent = true})
@@ -56,3 +57,12 @@ vim.api.nvim_set_keymap('n', '<Leader>B', ':lua require"dap".set_breakpoint(vim.
 vim.api.nvim_set_keymap('n', '<Leader>lp', ':lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>dr', ':lua require"dap".repl.open()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>dl', ':lua require"dap".run_last()<CR>', {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap('i', '<C-Tab>', 'codeium#Accept()', { noremap = true, expr = true, silent = true })  
+
+
+-- 跳转到函数定义
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+
+-- 查看函数定义信息（浮动窗口）
+vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })

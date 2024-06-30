@@ -46,7 +46,6 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     } 
-
     use {
         ("folke/tokyonight.nvim")
     }
@@ -66,9 +65,13 @@ return require('packer').startup(function(use)
                 -- config
             }
         end,
-        theme = 'doom',
         requires = {'nvim-tree/nvim-web-devicons'}
     }
     use 'mfussenegger/nvim-dap'
     use 'mfussenegger/nvim-dap-python'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "mfussenegger/nvim-dap-python"} }
+    use ({
+        "kmontocam/nvim-conda",
+        requires = { "nvim-lua/plenary.nvim" },
+    })
 end)
