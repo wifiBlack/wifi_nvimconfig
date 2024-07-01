@@ -1,4 +1,5 @@
-require("toggleterm").setup{
+toggleterm = require 'toggleterm'
+toggleterm.setup{
   size = 12,
   open_mapping = [[<c-\>]],
   hide_numbers = true,

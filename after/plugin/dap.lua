@@ -15,10 +15,3 @@ dap.listeners.after.event_initialized["dapui_config"] = function()
 	require("dapui").open()
 end
 vim.keymap.set("n", "<leader>de", ':lua require("dapui").close()<CR>', { noremap = true, silent = true })
--- -- 调试会话结束时自动关闭 dapui
--- dap.listeners.before.event_terminated["dapui_config"] = function()
---   require('dapui').close()
--- end
--- dap.listeners.before.event_exited["dapui_config"] = function()
---   require('dapui').close()
--- end
