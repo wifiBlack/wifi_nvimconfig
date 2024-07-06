@@ -1,6 +1,7 @@
 vim.opt.guifont = "0xProto Nerd Font:h17"
 vim.opt.guicursor = ""
-vim.g.neovide_transparency = 0.9
+vim.g.neovide_transparency = 0.7
+vim.o.cursorline = true
 
 -- Common settings
 vim.opt.nu = true
@@ -62,4 +63,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-vim.cmd('colorscheme tokyonight-moon')
+vim.cmd('colorscheme tokyonight-day')
+-- vim.cmd [[
+-- hi CursorLine guibg=#3c3836
+-- ]]

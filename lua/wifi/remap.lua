@@ -81,3 +81,7 @@ vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { no
 -- 查看函数定义信息（浮动窗口）
 vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true })
 keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+
+keymap.set('n', '<leader>mm', '<cmd>BufferLineCycleNext<CR>', {noremap = true})
+keymap.set('n', '<leader>nn', '<cmd>BufferLineCyclePrev<CR>', {noremap = true})

@@ -54,4 +54,19 @@ return require('packer').startup(function(use)
             "kmontocam/nvim-conda",
             requires = { "nvim-lua/plenary.nvim" },
         })
+        use {
+            'chipsenkbeil/distant.nvim',
+            branch = 'v0.3',
+            config = function()
+                require('distant'):setup()
+            end
+        }
+        use {
+            'VonHeikemen/fine-cmdline.nvim',
+            requires = {
+                {'MunifTanjim/nui.nvim'}
+            }
+        }
+
+        use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
     end)
