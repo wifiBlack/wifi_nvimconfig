@@ -30,7 +30,7 @@ keymap.set("n", "<leader>yy", '"+y', { desc = "复制到系统剪切板" })
 keymap.set("n", "<leader>p", '"+p', { desc = "从系统剪切板粘贴" })
 
 keymap.set("n", "<leader>das", vim.cmd.Dashboard, { desc = "打开 Dashboard" })
-
+vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-n>]], {noremap = true, silent = true})
 -- 切换到终端1
 vim.api.nvim_set_keymap("n", "<leader>t1", ":ToggleTerm 1<CR>", { noremap = true, silent = true })
 -- 切换到终端2

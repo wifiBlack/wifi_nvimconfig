@@ -63,7 +63,8 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-vim.cmd('colorscheme tokyonight-day')
+-- vim.cmd('colorscheme tokyonight-day')
+vim.cmd('colorscheme rose-pine-dawn')
 -- vim.cmd [[
 -- hi CursorLine guibg=#3c3836
 -- ]]

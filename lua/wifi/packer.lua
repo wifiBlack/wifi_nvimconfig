@@ -36,6 +36,9 @@ return require('packer').startup(function(use)
         use {
             ("folke/tokyonight.nvim")
         }
+        use {
+            ("rose-pine/neovim")
+        }
         use{("Exafunction/codeium.vim")}
         use {
             'nvim-lualine/lualine.nvim',

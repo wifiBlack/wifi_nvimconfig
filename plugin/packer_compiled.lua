@@ -132,6 +132,11 @@ _G.packer_plugins = {
     path = "/home/wifi/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neovim = {
+    loaded = true,
+    path = "/home/wifi/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/home/wifi/.local/share/nvim/site/pack/packer/start/nui.nvim",
