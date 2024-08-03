@@ -45,7 +45,6 @@ vim.api.nvim_set_keymap("n", "<leader>tv2", ":ToggleTerm 2 direction=vertical<CR
 -- 浮动窗口打开终端3
 vim.api.nvim_set_keymap("n", "<leader>tf3", ":ToggleTerm 3 direction=float<CR>", { noremap = true, silent = true })
 
--- 调试控制快捷键
 
 -- 调试控制快捷键，加入 CTRL 组合键
 vim.api.nvim_set_keymap("n", "<leader>db", ':lua require"dap".continue()<CR>', { noremap = true, silent = true })
